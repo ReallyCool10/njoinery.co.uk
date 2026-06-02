@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - N Joinery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">N Joinery</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Let's discuss your architectural joinery project</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-block">
+                        <h3>📍 Location</h3>
+                        <p>UK-based specialists in architectural joinery</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@njoinery.co.uk">info@njoinery.co.uk</a></p>
+                    </div>
+                    <div class="info-block">
+                        <h3>📱 Phone</h3>
+                        <p>Available for consultation</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>⏰ Response Time</h3>
+                        <p>We typically respond within 24 hours</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="project">Project Type</label>
+                            <select id="project" name="project">
+                                <option>Select a project type</option>
+                                <option>Fitted Wardrobe</option>
+                                <option>Built-in Shelving</option>
+                                <option>Kitchen Cabinetry</option>
+                                <option>Architectural Panelling</option>
+                                <option>Bespoke Furniture</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 N Joinery. All rights reserved.</p>
+            <p>Premium Architectural Joinery & Bespoke Fitted Furniture</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
