@@ -1,0 +1,11 @@
+# N Joinery — robots.txt
+# https://njoinery.co.uk
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://njoinery.co.uk/sitemap.xml
+
+# Exclude non-content directories
+Disallow: /DATA/

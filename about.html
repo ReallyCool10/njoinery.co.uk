@@ -3,71 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - N Joinery</title>
+    <title>About — N Joinery | Decades of Craftsmanship</title>
+    <meta name="description" content="Learn about N Joinery — decades of experience in high-end architectural joinery, bespoke furniture, and specialist inlay work across the United Kingdom.">
+    <meta name="keywords" content="about N Joinery, joinery experience, bespoke furniture makers, architectural joinery specialists, UK craftsmen">
+    <meta name="author" content="N Joinery">
+    <link rel="canonical" href="https://njoinery.co.uk/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About — N Joinery | Decades of Craftsmanship">
+    <meta property="og:description" content="Learn about N Joinery — decades of experience in high-end architectural joinery and bespoke furniture.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://njoinery.co.uk/about.html">
+    <meta property="og:image" content="https://njoinery.co.uk/images/portfolio/celtic-inlay.jpg">
+    <meta property="og:site_name" content="N Joinery">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About — N Joinery">
+    <meta name="twitter:description" content="Decades of experience in high-end architectural joinery and bespoke furniture.">
+    <meta name="twitter:image" content="https://njoinery.co.uk/images/portfolio/celtic-inlay.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data: AboutPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": "https://njoinery.co.uk/about.html",
+        "url": "https://njoinery.co.uk/about.html",
+        "name": "About N Joinery",
+        "description": "N Joinery is a specialist workshop dedicated to high-end architectural joinery and bespoke fitted furniture with decades of experience.",
+        "isPartOf": { "@id": "https://njoinery.co.uk/#website" },
+        "about": { "@id": "https://njoinery.co.uk/#business" }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">N Joinery</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="N Joinery" width="38" height="38">
+                <span class="logo-text"><span>Joinery</span></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
+            <span class="section-label">Our Story</span>
             <h1>About N Joinery</h1>
-            <p>Crafting excellence in architectural joinery since 1995</p>
+            <p>Crafting excellence in architectural joinery for over three decades.</p>
         </div>
     </section>
 
-    <!-- About Content -->
+    <!-- About Section -->
     <section class="about-section">
         <div class="container">
-            <div class="about-content">
-                <h2>Who We Are</h2>
-                <p>N Joinery is a specialist in high-end architectural joinery and bespoke fitted furniture. With decades of experience, we create exceptional custom pieces that combine superior craftsmanship with innovative design.</p>
-                
-                <h2>Our Approach</h2>
-                <p>Every project begins with a deep understanding of our client's vision. We work closely with architects, designers, and homeowners to create joinery solutions that exceed expectations. Our team of master craftspeople brings together traditional techniques with modern innovation.</p>
-                
-                <h2>Quality & Materials</h2>
-                <p>We source only the finest materials, including premium hardwoods, veneers, and hardware. Each piece is meticulously crafted with attention to detail, ensuring longevity and timeless beauty.</p>
-                
-                <h2>Why Choose N Joinery?</h2>
-                <ul class="benefits-list">
-                    <li>✓ Expert craftsmanship with decades of experience</li>
-                    <li>✓ Bespoke design tailored to your specifications</li>
-                    <li>✓ Premium materials and finishes</li>
-                    <li>✓ Attention to architectural detail</li>
-                    <li>✓ Reliable timelines and project management</li>
-                    <li>✓ Portfolio of successful high-end projects</li>
-                </ul>
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="images/portfolio/luxury-kitchen.jpg" alt="N Joinery luxury kitchen project showcasing walnut craftsmanship" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <span class="section-label reveal">Who We Are</span>
+                    <h2 class="reveal">Where Tradition Meets Precision</h2>
+                    <p class="reveal">N Joinery is a specialist workshop dedicated to high-end architectural joinery and bespoke fitted furniture. With decades of experience, we create exceptional custom pieces that combine superior craftsmanship with innovative design.</p>
+                    <p class="reveal">Every project begins with a deep understanding of our client's vision. We work closely with architects, interior designers, and homeowners to deliver joinery solutions that exceed expectations — from luxury kitchens and fitted libraries to church doors and intricate timber inlays.</p>
+                    <ul class="benefits-list reveal">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Expert craftsmanship with decades of experience
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Bespoke designs tailored to your exact specifications
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Premium hardwoods, veneers, and specialist finishes
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Meticulous attention to architectural detail
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Reliable timelines and professional project management
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Process Section -->
+    <section class="process-section">
         <div class="container">
-            <h2>Ready to Work With Us?</h2>
-            <p>Contact us to discuss your architectural joinery requirements</p>
-            <a href="contact.html" class="cta-button cta-light">Get in Touch</a>
+            <div class="section-header">
+                <span class="section-label reveal">How We Work</span>
+                <h2 class="section-title reveal">From Vision to Reality</h2>
+                <p class="section-subtitle reveal">Every commission follows a proven process to ensure exceptional results.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="process-number">01</div>
+                    <h3>Consult</h3>
+                    <p>We begin with a detailed conversation about your space, requirements, and design preferences.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="process-number">02</div>
+                    <h3>Design</h3>
+                    <p>Our team develops detailed designs, selects materials, and presents options for your approval.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="process-number">03</div>
+                    <h3>Craft</h3>
+                    <p>Every piece is meticulously crafted in our workshop using traditional techniques and modern precision.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-4">
+                    <div class="process-number">04</div>
+                    <h3>Install</h3>
+                    <p>Professional installation ensures a perfect fit, with final adjustments made on-site to your satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Call to Action -->
+    <section class="cta-section cta-section--image">
+        <div class="cta-bg" style="background-image: url('images/portfolio/celtic-inlay.jpg');"></div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Work With Us?</h2>
+                <p>Contact us to discuss your architectural joinery requirements and discover what's possible.</p>
+                <a href="contact.html" class="btn btn--light">Get in Touch <span class="btn-arrow">→</span></a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 N Joinery. All rights reserved.</p>
-            <p>Premium Architectural Joinery & Bespoke Fitted Furniture</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="N Joinery" width="32" height="32">
+                        <span class="logo-text"><span>Joinery</span></span>
+                    </a>
+                    <p>Specialists in high-end architectural joinery and bespoke fitted furniture. Every piece crafted with precision and artistry.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="portfolio.html">Fitted Furniture</a></li>
+                        <li><a href="portfolio.html">Architectural Joinery</a></li>
+                        <li><a href="portfolio.html">Bespoke Kitchens</a></li>
+                        <li><a href="portfolio.html">Specialist Inlay</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 N Joinery. All rights reserved.</p>
+                <p>Premium Architectural Joinery &amp; Bespoke Fitted Furniture</p>
+            </div>
         </div>
     </footer>
 

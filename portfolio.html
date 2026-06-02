@@ -3,75 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - N Joinery</title>
+    <title>Portfolio — N Joinery | Architectural Joinery Projects</title>
+    <meta name="description" content="Explore our portfolio of bespoke architectural joinery — luxury kitchens, fitted cabinetry, church doors, custom saunas, and specialist timber inlay work across the UK.">
+    <meta name="keywords" content="joinery portfolio, bespoke cabinetry, luxury kitchen projects, timber inlay, church doors, sauna build, fitted furniture gallery">
+    <meta name="author" content="N Joinery">
+    <link rel="canonical" href="https://njoinery.co.uk/portfolio.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio — N Joinery | Architectural Joinery Projects">
+    <meta property="og:description" content="Explore our portfolio of bespoke architectural joinery — luxury kitchens, fitted cabinetry, church doors, custom saunas, and specialist inlay work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://njoinery.co.uk/portfolio.html">
+    <meta property="og:image" content="https://njoinery.co.uk/images/portfolio/cabinets-wide.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="N Joinery">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio — N Joinery">
+    <meta name="twitter:description" content="Bespoke architectural joinery projects — luxury kitchens, fitted cabinetry, church doors, and specialist inlay.">
+    <meta name="twitter:image" content="https://njoinery.co.uk/images/portfolio/cabinets-wide.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data: CollectionPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://njoinery.co.uk/portfolio.html",
+        "url": "https://njoinery.co.uk/portfolio.html",
+        "name": "Portfolio — N Joinery",
+        "description": "A curated gallery of bespoke architectural joinery projects by N Joinery.",
+        "isPartOf": { "@id": "https://njoinery.co.uk/#website" },
+        "about": { "@id": "https://njoinery.co.uk/#business" },
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Luxury Walnut Kitchen",
+                    "description": "Full walnut kitchen with coffered ceiling, brass fittings, and onyx stone backsplash panels.",
+                    "image": "https://njoinery.co.uk/images/portfolio/luxury-kitchen.jpg"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Oak Library & Window Seat",
+                    "description": "Floor-to-ceiling oak shelving with detailed panelled doors, window seat, and integrated LED uplighting.",
+                    "image": "https://njoinery.co.uk/images/portfolio/cabinets-wide.jpg"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Custom Sauna Build",
+                    "description": "Bespoke sauna interior with slatted benching, integrated LED strip lighting, and modern heater installation.",
+                    "image": "https://njoinery.co.uk/images/portfolio/sauna.jpg"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Church Doors",
+                    "description": "Bespoke ecclesiastical doors in ash with inset blue stained glass cross details.",
+                    "image": "https://njoinery.co.uk/images/portfolio/church-doors-cross.png"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Celtic Cross Inlay",
+                    "description": "Hand-cut Celtic knot cross motif inlaid in contrasting cherry and maple veneers.",
+                    "image": "https://njoinery.co.uk/images/portfolio/celtic-inlay.jpg"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">N Joinery</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="N Joinery" width="38" height="38">
+                <span class="logo-text"><span>Joinery</span></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Our Portfolio</h1>
-            <p>Showcasing our finest architectural joinery projects</p>
+            <span class="section-label">Our Work</span>
+            <h1>Portfolio</h1>
+            <p>Showcasing our finest architectural joinery projects, each one a testament to precision and artistry.</p>
         </div>
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="portfolio">
+    <section class="portfolio-section">
         <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs reveal">
+                <button class="filter-tab active" data-filter="all">All Projects</button>
+                <button class="filter-tab" data-filter="cabinetry">Cabinetry</button>
+                <button class="filter-tab" data-filter="kitchen">Kitchens</button>
+                <button class="filter-tab" data-filter="inlay">Flooring &amp; Inlay</button>
+                <button class="filter-tab" data-filter="doors">Doors</button>
+                <button class="filter-tab" data-filter="sauna">Saunas</button>
+            </div>
+
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #8B7355 0%, #D2B48C 100%);"></div>
+                <!-- Luxury Kitchen -->
+                <div class="portfolio-item reveal" data-category="kitchen" data-lightbox="images/portfolio/luxury-kitchen.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/luxury-kitchen.jpg" alt="Luxury walnut kitchen with coffered ceiling and onyx backsplash" loading="lazy">
+                    </div>
                     <div class="portfolio-info">
-                        <h3>Modern Walnut Library</h3>
-                        <p>Floor-to-ceiling walnut shelving with integrated lighting and bespoke desk space</p>
+                        <span class="portfolio-category">Kitchen</span>
+                        <h3>Luxury Walnut Kitchen</h3>
+                        <p>Full walnut kitchen with coffered ceiling, brass fittings, and onyx stone backsplash panels.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);"></div>
+
+                <!-- Oak Cabinets Wide -->
+                <div class="portfolio-item reveal" data-category="cabinetry" data-lightbox="images/portfolio/cabinets-wide.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/cabinets-wide.jpg" alt="Bespoke oak cabinetry with integrated LED uplighting" loading="lazy">
+                    </div>
                     <div class="portfolio-info">
-                        <h3>Contemporary Fitted Kitchen</h3>
-                        <p>Custom cabinetry with premium finishes and integrated appliances</p>
+                        <span class="portfolio-category">Cabinetry</span>
+                        <h3>Oak Library &amp; Window Seat</h3>
+                        <p>Floor-to-ceiling oak shelving with detailed panelled doors, window seat, and integrated LED uplighting.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #C19A6B 0%, #DAA520 100%);"></div>
+
+                <!-- Oak Cabinets Detail -->
+                <div class="portfolio-item reveal" data-category="cabinetry" data-lightbox="images/portfolio/cabinets-detail.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/cabinets-detail.jpg" alt="Close-up of bespoke oak panelling detail" loading="lazy">
+                    </div>
                     <div class="portfolio-info">
-                        <h3>Luxury Wardrobe System</h3>
-                        <p>Bespoke bedroom furniture with elegant oak veneer and soft-close mechanisms</p>
+                        <span class="portfolio-category">Cabinetry</span>
+                        <h3>Panelling Detail</h3>
+                        <p>Precision joinery with decorative gothic-arch panelling in solid European oak.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #696969 0%, #808080 100%);"></div>
+
+                <!-- Sauna -->
+                <div class="portfolio-item reveal" data-category="sauna" data-lightbox="images/portfolio/sauna.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/sauna.jpg" alt="Custom-built sauna interior with LED lighting" loading="lazy">
+                    </div>
                     <div class="portfolio-info">
-                        <h3>Executive Office Suite</h3>
-                        <p>Integrated desk, storage, and panelling with premium leather accents</p>
+                        <span class="portfolio-category">Sauna</span>
+                        <h3>Custom Sauna Build</h3>
+                        <p>Bespoke sauna interior with slatted benching, integrated LED strip lighting, and modern heater installation.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);"></div>
+
+                <!-- Sunburst Panel -->
+                <div class="portfolio-item reveal" data-category="doors" data-lightbox="images/portfolio/sunburst-panel.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/sunburst-panel.jpg" alt="Art-deco sunburst wood panelling" loading="lazy">
+                    </div>
                     <div class="portfolio-info">
-                        <h3>Mahogany Statement Wall</h3>
-                        <p>Architectural wall panelling in rich mahogany with bespoke lighting design</p>
+                        <span class="portfolio-category">Doors</span>
+                        <h3>Art Deco Sunburst Panel</h3>
+                        <p>Statement entrance panelling with radiating hardwood sunburst detail in rich mahogany.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #D3D3D3 0%, #A9A9A9 100%);"></div>
+
+                <!-- Church Doors -->
+                <div class="portfolio-item reveal" data-category="doors" data-lightbox="images/portfolio/church-doors-cross.png">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/church-doors-cross.png" alt="Church doors with blue stained glass crosses" loading="lazy">
+                    </div>
                     <div class="portfolio-info">
-                        <h3>Minimalist Study Nook</h3>
-                        <p>Streamlined workspace with integrated storage in light ash timber</p>
+                        <span class="portfolio-category">Doors</span>
+                        <h3>Church Doors</h3>
+                        <p>Bespoke ecclesiastical doors in ash with inset blue stained glass cross details.</p>
+                    </div>
+                </div>
+
+                <!-- Compass Star Deck -->
+                <div class="portfolio-item reveal" data-category="inlay" data-lightbox="images/portfolio/compass-star-deck.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/compass-star-deck.jpg" alt="Hardwood decking with compass star inlay" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Flooring &amp; Inlay</span>
+                        <h3>Compass Star Decking</h3>
+                        <p>Precision inlay compass-star motif set into rich hardwood decking with glass balustrade surround.</p>
+                    </div>
+                </div>
+
+                <!-- Star Inlay Detail -->
+                <div class="portfolio-item reveal" data-category="inlay" data-lightbox="images/portfolio/star-inlay-detail.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/star-inlay-detail.jpg" alt="Detailed compass star inlay in hardwood flooring" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Flooring &amp; Inlay</span>
+                        <h3>Star Inlay Detail</h3>
+                        <p>Intricate four-point compass star inlay with contrasting timber veneers in a hardwood floor.</p>
+                    </div>
+                </div>
+
+                <!-- Celtic Inlay -->
+                <div class="portfolio-item reveal" data-category="inlay" data-lightbox="images/portfolio/celtic-inlay.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/celtic-inlay.jpg" alt="Celtic knot cross inlay in contrasting hardwoods" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Flooring &amp; Inlay</span>
+                        <h3>Celtic Cross Inlay</h3>
+                        <p>Hand-cut Celtic knot cross motif inlaid in contrasting cherry and maple veneers.</p>
+                    </div>
+                </div>
+
+                <!-- Compass Inlay -->
+                <div class="portfolio-item reveal" data-category="inlay" data-lightbox="images/portfolio/compass-inlay.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/compass-inlay.jpg" alt="Compass rose inlay detail" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Flooring &amp; Inlay</span>
+                        <h3>Compass Rose</h3>
+                        <p>Delicate compass rose inlay with tonal gradients across multiple timber species.</p>
+                    </div>
+                </div>
+
+                <!-- Sauna Detail -->
+                <div class="portfolio-item reveal" data-category="sauna" data-lightbox="images/portfolio/sauna-detail.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/sauna-detail.jpg" alt="Sauna interior seating detail" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Sauna</span>
+                        <h3>Sauna Interior Detail</h3>
+                        <p>Ergonomic benching with precision tongue-and-groove joinery in heat-treated timber.</p>
+                    </div>
+                </div>
+
+                <!-- Cabinets Angle -->
+                <div class="portfolio-item reveal" data-category="cabinetry" data-lightbox="images/portfolio/cabinets-angle.jpg">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/cabinets-angle.jpg" alt="Oak cabinetry from side angle showing depth" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Cabinetry</span>
+                        <h3>Library Perspective</h3>
+                        <p>Angled view showing the depth and craftsmanship of the fitted shelving and window seat integration.</p>
                     </div>
                 </div>
             </div>
@@ -79,21 +280,58 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="cta-section">
+    <section class="cta-section cta-section--dark">
         <div class="container">
-            <h2>Interested in a Custom Project?</h2>
-            <p>Let's create something exceptional for your space</p>
-            <a href="contact.html" class="cta-button cta-light">Start Your Project</a>
+            <div class="cta-content reveal">
+                <h2>Interested in a Custom Project?</h2>
+                <p>Every commission begins with a conversation. Let's create something exceptional for your space.</p>
+                <a href="contact.html" class="btn btn--primary">Start Your Project <span class="btn-arrow">→</span></a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 N Joinery. All rights reserved.</p>
-            <p>Premium Architectural Joinery & Bespoke Fitted Furniture</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="N Joinery" width="32" height="32">
+                        <span class="logo-text"><span>Joinery</span></span>
+                    </a>
+                    <p>Specialists in high-end architectural joinery and bespoke fitted furniture. Every piece crafted with precision and artistry.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="portfolio.html">Fitted Furniture</a></li>
+                        <li><a href="portfolio.html">Architectural Joinery</a></li>
+                        <li><a href="portfolio.html">Bespoke Kitchens</a></li>
+                        <li><a href="portfolio.html">Specialist Inlay</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 N Joinery. All rights reserved.</p>
+                <p>Premium Architectural Joinery &amp; Bespoke Fitted Furniture</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="Project image">
+    </div>
 
     <script src="js/script.js"></script>
 </body>

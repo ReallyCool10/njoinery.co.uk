@@ -3,28 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - N Joinery</title>
+    <title>Contact — N Joinery | Start Your Project</title>
+    <meta name="description" content="Get in touch with N Joinery to discuss your bespoke architectural joinery project. We specialise in luxury kitchens, fitted furniture, church doors, and specialist timber inlay.">
+    <meta name="keywords" content="contact N Joinery, bespoke joinery enquiry, architectural joinery quote, fitted furniture consultation, UK joinery contact">
+    <meta name="author" content="N Joinery">
+    <link rel="canonical" href="https://njoinery.co.uk/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — N Joinery | Start Your Project">
+    <meta property="og:description" content="Get in touch with N Joinery to discuss your bespoke architectural joinery project.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://njoinery.co.uk/contact.html">
+    <meta property="og:image" content="https://njoinery.co.uk/images/portfolio/luxury-kitchen.jpg">
+    <meta property="og:site_name" content="N Joinery">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact — N Joinery">
+    <meta name="twitter:description" content="Get in touch to discuss your bespoke architectural joinery project.">
+    <meta name="twitter:image" content="https://njoinery.co.uk/images/portfolio/luxury-kitchen.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data: ContactPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "@id": "https://njoinery.co.uk/contact.html",
+        "url": "https://njoinery.co.uk/contact.html",
+        "name": "Contact N Joinery",
+        "description": "Get in touch with N Joinery to discuss your bespoke architectural joinery project.",
+        "isPartOf": { "@id": "https://njoinery.co.uk/#website" },
+        "about": { "@id": "https://njoinery.co.uk/#business" }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">N Joinery</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="N Joinery" width="38" height="38">
+                <span class="logo-text"><span>Joinery</span></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
+            <span class="section-label">Start a Conversation</span>
             <h1>Get in Touch</h1>
-            <p>Let's discuss your architectural joinery project</p>
+            <p>Every exceptional project begins with a conversation. Tell us about yours.</p>
         </div>
     </section>
 
@@ -32,58 +80,90 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-wrapper">
-                <div class="contact-info">
+                <div class="contact-info-card reveal">
                     <h2>Contact Information</h2>
+                    <p>Reach out and we'll respond within 24 hours to discuss your project.</p>
+
                     <div class="info-block">
-                        <h3>📍 Location</h3>
-                        <p>UK-based specialists in architectural joinery</p>
+                        <div class="info-block-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>UK-based specialists in architectural joinery</p>
+                        </div>
                     </div>
+
                     <div class="info-block">
-                        <h3>📧 Email</h3>
-                        <p><a href="mailto:info@njoinery.co.uk">info@njoinery.co.uk</a></p>
+                        <div class="info-block-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@njoinery.co.uk">info@njoinery.co.uk</a></p>
+                        </div>
                     </div>
+
                     <div class="info-block">
-                        <h3>📱 Phone</h3>
-                        <p>Available for consultation</p>
+                        <div class="info-block-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>Available for consultation</p>
+                        </div>
                     </div>
+
                     <div class="info-block">
-                        <h3>⏰ Response Time</h3>
-                        <p>We typically respond within 24 hours</p>
+                        <div class="info-block-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h3>Response Time</h3>
+                            <p>We typically respond within 24 hours</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper">
+                <div class="contact-form-wrapper reveal reveal-delay-1">
                     <h2>Send us a Message</h2>
-                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="+44 7XXX XXXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-project">Project Type</label>
+                                <select id="contact-project" name="project">
+                                    <option value="" disabled selected>Select a project type</option>
+                                    <option>Fitted Wardrobe</option>
+                                    <option>Built-in Shelving / Library</option>
+                                    <option>Kitchen Cabinetry</option>
+                                    <option>Architectural Panelling</option>
+                                    <option>Doors (Residential / Ecclesiastical)</option>
+                                    <option>Flooring & Inlay</option>
+                                    <option>Sauna Build</option>
+                                    <option>Bespoke Furniture</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="contact-message">Project Details</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your project — dimensions, materials, design preferences, and any inspiration you have in mind." required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="project">Project Type</label>
-                            <select id="project" name="project">
-                                <option>Select a project type</option>
-                                <option>Fitted Wardrobe</option>
-                                <option>Built-in Shelving</option>
-                                <option>Kitchen Cabinetry</option>
-                                <option>Architectural Panelling</option>
-                                <option>Bespoke Furniture</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Inquiry</button>
+                        <button type="submit" class="btn btn--primary submit-button">Send Inquiry <span class="btn-arrow">→</span></button>
                     </form>
                 </div>
             </div>
@@ -93,8 +173,37 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 N Joinery. All rights reserved.</p>
-            <p>Premium Architectural Joinery & Bespoke Fitted Furniture</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="N Joinery" width="32" height="32">
+                        <span class="logo-text"><span>Joinery</span></span>
+                    </a>
+                    <p>Specialists in high-end architectural joinery and bespoke fitted furniture. Every piece crafted with precision and artistry.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="portfolio.html">Fitted Furniture</a></li>
+                        <li><a href="portfolio.html">Architectural Joinery</a></li>
+                        <li><a href="portfolio.html">Bespoke Kitchens</a></li>
+                        <li><a href="portfolio.html">Specialist Inlay</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 N Joinery. All rights reserved.</p>
+                <p>Premium Architectural Joinery &amp; Bespoke Fitted Furniture</p>
+            </div>
         </div>
     </footer>
 

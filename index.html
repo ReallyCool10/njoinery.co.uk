@@ -3,102 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N Joinery - High-End Architectural Joinery</title>
+    <title>N Joinery — High-End Architectural Joinery &amp; Bespoke Furniture</title>
+    <meta name="description" content="N Joinery creates exceptional bespoke architectural joinery and fitted furniture. From luxury kitchens and fitted libraries to church doors and intricate timber inlays, every piece is crafted with precision and artistry.">
+    <meta name="keywords" content="bespoke joinery, architectural joinery, fitted furniture, luxury kitchens, bespoke cabinetry, timber inlay, church doors, custom sauna, hardwood flooring, UK joinery">
+    <meta name="author" content="N Joinery">
+    <link rel="canonical" href="https://njoinery.co.uk/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="N Joinery — High-End Architectural Joinery &amp; Bespoke Furniture">
+    <meta property="og:description" content="Bespoke fitted furniture and architectural joinery crafted to perfection. Luxury kitchens, fitted libraries, church doors, and specialist timber inlay work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://njoinery.co.uk/">
+    <meta property="og:image" content="https://njoinery.co.uk/images/portfolio/luxury-kitchen.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="N Joinery">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="N Joinery — High-End Architectural Joinery">
+    <meta name="twitter:description" content="Bespoke fitted furniture and architectural joinery crafted to perfection.">
+    <meta name="twitter:image" content="https://njoinery.co.uk/images/portfolio/luxury-kitchen.jpg">
+
+    <!-- Geo & Local -->
+    <meta name="geo.region" content="GB">
+    <meta name="geo.placename" content="United Kingdom">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data: LocalBusiness + WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://njoinery.co.uk/#business",
+                "name": "N Joinery",
+                "url": "https://njoinery.co.uk",
+                "logo": "https://njoinery.co.uk/images/logo.svg",
+                "image": "https://njoinery.co.uk/images/portfolio/luxury-kitchen.jpg",
+                "description": "Specialists in high-end architectural joinery and bespoke fitted furniture. From luxury kitchens and fitted libraries to church doors and intricate timber inlays.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "GB"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "United Kingdom"
+                },
+                "priceRange": "$$$$",
+                "knowsAbout": [
+                    "Bespoke joinery",
+                    "Architectural joinery",
+                    "Fitted furniture",
+                    "Luxury kitchens",
+                    "Timber inlay",
+                    "Church doors",
+                    "Custom saunas",
+                    "Hardwood flooring",
+                    "Cabinetry"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://njoinery.co.uk/#website",
+                "url": "https://njoinery.co.uk",
+                "name": "N Joinery",
+                "publisher": { "@id": "https://njoinery.co.uk/#business" }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://njoinery.co.uk/",
+                "url": "https://njoinery.co.uk/",
+                "name": "N Joinery — High-End Architectural Joinery & Bespoke Furniture",
+                "description": "N Joinery creates exceptional bespoke architectural joinery and fitted furniture.",
+                "isPartOf": { "@id": "https://njoinery.co.uk/#website" },
+                "about": { "@id": "https://njoinery.co.uk/#business" }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">N Joinery</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="N Joinery" width="38" height="38">
+                <span class="logo-text"><span>Joinery</span></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
+        <div class="hero-bg" style="background-image: url('images/portfolio/cabinets-wide.jpg');"></div>
         <div class="hero-content">
-            <h1>Exceptional Architectural Joinery</h1>
-            <p>Bespoke fitted furniture and architectural joinery crafted to perfection</p>
-            <a href="portfolio.html" class="cta-button">View Our Work</a>
+            <h1>Craftsmanship That Speaks <em>Volumes</em></h1>
+            <p>Bespoke architectural joinery and fitted furniture, designed for spaces that demand the extraordinary.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="portfolio.html" class="btn btn--primary">View Our Work <span class="btn-arrow">→</span></a>
+                <a href="contact.html" class="btn btn--outline">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="services">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <div class="section-header">
+                <span class="section-label reveal">What We Do</span>
+                <h2 class="section-title reveal">Expertise in Every Detail</h2>
+                <p class="section-subtitle reveal">From concept to completion, we bring together traditional craft and contemporary design.</p>
+            </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📐</div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM17.5 14v7M14 17.5h7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
                     <h3>Bespoke Design</h3>
-                    <p>Custom-designed solutions tailored to your space and requirements</p>
+                    <p>Custom solutions tailored precisely to your space, lifestyle, and architectural vision.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛠</div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
                     <h3>Master Craftsmanship</h3>
-                    <p>Premium materials and expert techniques for flawless execution</p>
+                    <p>Decades of expertise brought to every joint, every grain, and every finish.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏗</div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
                     <h3>Fitted Furniture</h3>
-                    <p>Built-in wardrobes, bookcases, kitchens, and architectural elements</p>
+                    <p>Built-in wardrobes, libraries, kitchens, and architectural elements that become part of your home.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
                     <h3>Premium Finishes</h3>
-                    <p>High-end finishes and attention to every detail</p>
+                    <p>Hand-selected hardwoods, veneers, and hardware with meticulous attention to every surface.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Work -->
-    <section class="featured">
+    <section class="featured" id="featured">
         <div class="container">
-            <h2>Featured Projects</h2>
-            <p class="section-subtitle">See examples of our latest architectural joinery work</p>
+            <div class="section-header">
+                <span class="section-label reveal">Featured Projects</span>
+                <h2 class="section-title reveal">Work That Defines Spaces</h2>
+                <p class="section-subtitle reveal">A selection of our finest architectural joinery commissions.</p>
+            </div>
             <div class="featured-grid">
-                <div class="featured-item">
-                    <div class="featured-image" style="background: linear-gradient(135deg, #8B7355 0%, #D2B48C 100%);"></div>
-                    <h3>Modern Walnut Library</h3>
+                <div class="featured-item reveal reveal-delay-1" data-lightbox="images/portfolio/luxury-kitchen.jpg">
+                    <img src="images/portfolio/luxury-kitchen.jpg" alt="Luxury walnut kitchen with onyx backsplash" loading="lazy">
+                    <div class="featured-overlay">
+                        <span class="featured-category">Kitchen</span>
+                        <h3>Luxury Walnut Kitchen</h3>
+                    </div>
                 </div>
-                <div class="featured-item">
-                    <div class="featured-image" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);"></div>
-                    <h3>Contemporary Fitted Kitchen</h3>
+                <div class="featured-item reveal reveal-delay-2" data-lightbox="images/portfolio/cabinets-detail.jpg">
+                    <img src="images/portfolio/cabinets-detail.jpg" alt="Bespoke oak cabinetry with detailed panelling" loading="lazy">
+                    <div class="featured-overlay">
+                        <span class="featured-category">Cabinetry</span>
+                        <h3>Bespoke Oak Cabinetry</h3>
+                    </div>
                 </div>
-                <div class="featured-item">
-                    <div class="featured-image" style="background: linear-gradient(135deg, #C19A6B 0%, #DAA520 100%);"></div>
-                    <h3>Luxury Wardrobe System</h3>
+                <div class="featured-item reveal reveal-delay-3" data-lightbox="images/portfolio/sauna.jpg">
+                    <img src="images/portfolio/sauna.jpg" alt="Custom-built sauna with integrated LED lighting" loading="lazy">
+                    <div class="featured-overlay">
+                        <span class="featured-category">Sauna</span>
+                        <h3>Custom Sauna Build</h3>
+                    </div>
                 </div>
             </div>
-            <div class="center-cta">
-                <a href="portfolio.html" class="cta-button">View Full Portfolio</a>
+            <div class="center-cta reveal">
+                <a href="portfolio.html" class="btn btn--outline-dark">View Full Portfolio <span class="btn-arrow">→</span></a>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Create Something Extraordinary?</h2>
-            <p>Let's discuss your vision for bespoke architectural joinery</p>
-            <a href="contact.html" class="cta-button cta-light">Get in Touch</a>
-        </div>
-    </section>
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 N Joinery. All rights reserved.</p>
-            <p>Premium Architectural Joinery & Bespoke Fitted Furniture</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="N Joinery" width="32" height="32">
+                        <span class="logo-text"><span>Joinery</span></span>
+                    </a>
+                    <p>Specialists in high-end architectural joinery and bespoke fitted furniture. Every piece crafted with precision and artistry.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="portfolio.html">Fitted Furniture</a></li>
+                        <li><a href="portfolio.html">Architectural Joinery</a></li>
+                        <li><a href="portfolio.html">Bespoke Kitchens</a></li>
+                        <li><a href="portfolio.html">Specialist Inlay</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 N Joinery. All rights reserved.</p>
+                <p>Premium Architectural Joinery &amp; Bespoke Fitted Furniture</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="Project image">
+    </div>
 
     <script src="js/script.js"></script>
 </body>
