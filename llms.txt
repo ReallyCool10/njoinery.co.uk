@@ -1,42 +1,34 @@
-# N Joinery
+# N Joinery - njoinery.co.uk
 
-> Specialists in high-end architectural joinery and bespoke fitted furniture across the United Kingdom.
+> Specialists in high-end architectural joinery and bespoke fitted furniture.
 
-N Joinery is a specialist workshop dedicated to high-end architectural joinery and bespoke fitted furniture. With decades of experience, we create exceptional custom pieces that combine superior craftsmanship with innovative design.
+## Pages
+
+- [Home](https://njoinery.co.uk/): Landing page with hero, services overview, and featured projects.
+- [Portfolio](https://njoinery.co.uk/portfolio.html): Curated showcase of seven bespoke joinery commissions.
+- [About](https://njoinery.co.uk/about.html): Our story, process, and values.
+- [Contact](https://njoinery.co.uk/contact.html): Get in touch for a commission.
+
+## Projects
+
+- [The Walnut Residence - Walnut Kitchen & Dining](https://njoinery.co.uk/project-walnut-kitchen.html): Full walnut kitchen-diner with coffered ceiling, brass fittings, and onyx stone backsplash.
+- [The Saffron Living Room - Oak Cabinetry & AV Suite](https://njoinery.co.uk/project-oak-cabinetry.html): Custom-fitted bookshelf, AV unit, and cabinetry with integrated window seat.
+- [Accoya Doors - Church Doors](https://njoinery.co.uk/project-church-doors.html): Ecclesiastical doors in Accoya timber with blue stained glass crosses.
+- [The Regent's Park Retreat - Bespoke Sauna](https://njoinery.co.uk/project-sauna.html): Custom-fitted sauna in a luxury London residence.
+- [The Compass Rose - Ipê Hardwood Inlay](https://njoinery.co.uk/project-flooring-inlay.html): Bespoke flooring with compass rose inlays in Ipê hardwood.
+- [The Art Deco Mantle - Ipê Sunburst](https://njoinery.co.uk/project-sunburst-mantle.html): Ipê hardwood mantelpiece with Art Deco radiating geometry.
+- [Fitted Furniture - Bespoke Cabinetry & Storage](https://njoinery.co.uk/project-fitted-furniture.html): Bespoke fitted furniture and custom cabinetry designed to maximise space.
 
 ## Services
 
-- **Bespoke Design** — Custom solutions tailored precisely to your space, lifestyle, and architectural vision.
-- **Master Craftsmanship** — Decades of expertise brought to every joint, every grain, and every finish.
-- **Fitted Furniture** — Built-in wardrobes, libraries, kitchens, and architectural elements that become part of your home.
-- **Premium Finishes** — Hand-selected hardwoods, veneers, and hardware with meticulous attention to every surface.
+- Bespoke Kitchens
+- Fitted Furniture & Cabinetry
+- Architectural Joinery
+- Ecclesiastical Woodwork
+- Specialist Timber Inlay
+- Custom Sauna Builds
+- Custom Cabinetry
 
-## Specialisms
+## Location
 
-- Luxury walnut and oak kitchens
-- Floor-to-ceiling fitted libraries and cabinetry
-- Bespoke ecclesiastical and church doors with stained glass
-- Custom sauna builds with integrated lighting
-- Specialist timber inlay — compass stars, Celtic knots, Art Deco sunburst motifs
-- Hardwood flooring with decorative inlay patterns
-- Architectural panelling and bespoke doors
-
-## Process
-
-1. **Consult** — Detailed conversation about your space, requirements, and design preferences.
-2. **Design** — Detailed designs, material selection, and options presented for approval.
-3. **Craft** — Meticulous workshop fabrication using traditional techniques and modern precision.
-4. **Install** — Professional installation with final adjustments made on-site.
-
-## Contact
-
-- Website: https://njoinery.co.uk
-- Email: info@njoinery.co.uk
-- Location: United Kingdom
-
-## Links
-
-- [Home](https://njoinery.co.uk/)
-- [Portfolio](https://njoinery.co.uk/portfolio.html)
-- [About](https://njoinery.co.uk/about.html)
-- [Contact](https://njoinery.co.uk/contact.html)
+United Kingdom - serving Bristol, London, Essex, and nationwide.
