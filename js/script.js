@@ -324,4 +324,93 @@
         }
     });
 
+    /* ---------- Contact Form Handler ---------- */
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        const formStatus = document.getElementById('form-status');
+        const submitBtn = contactForm.querySelector('.submit-button');
+        const projectSelect = document.getElementById('contact-project');
+        const subjectInput = document.getElementById('form-subject');
+
+        if (projectSelect && subjectInput) {
+            projectSelect.addEventListener('change', function () {
+                if (this.value) {
+                    subjectInput.value = 'New Inquiry from N Joinery Website — ' + this.value;
+                }
+            });
+        }
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            function showStatus(message, type) {
+                if (!formStatus) return;
+                formStatus.textContent = message;
+                formStatus.className = 'form-status active ' + type;
+            }
+
+            function clearStatus() {
+                if (!formStatus) return;
+                formStatus.textContent = '';
+                formStatus.className = 'form-status';
+            }
+
+            clearStatus();
+
+            const actionUrl = contactForm.getAttribute('action');
+
+            if (!actionUrl || actionUrl.includes('YOUR_FORM_ID')) {
+                showStatus('Notice: The contact form is currently in setup mode (placeholder Formspree ID). Please configure a valid Formspree form ID in contact.html.', 'warning');
+                return;
+            }
+
+            // Set loading state on submit button
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Send Inquiry';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.classList.add('is-loading');
+                submitBtn.innerHTML = '<span class="btn-spinner"></span> Sending...';
+            }
+
+            const formData = new FormData(contactForm);
+
+            fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json().then(function () {
+                        showStatus('Thank you for reaching out! Your inquiry has been sent successfully. We will be in touch shortly.', 'success');
+                        contactForm.reset();
+                    });
+                } else {
+                    return response.json().then(function (data) {
+                        if (data && data.errors && data.errors.length > 0) {
+                            var errMsg = data.errors.map(function (err) { return err.message; }).join(', ');
+                            showStatus('Error sending message: ' + errMsg, 'error');
+                        } else {
+                            showStatus('There was a problem submitting your message. Please try again or contact us directly.', 'error');
+                        }
+                    }).catch(function () {
+                        showStatus('There was a problem submitting your message. Please try again or contact us directly.', 'error');
+                    });
+                }
+            })
+            .catch(function (error) {
+                showStatus('Unable to send message due to a connection issue. Please check your internet connection or try again.', 'error');
+            })
+            .finally(function () {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('is-loading');
+                    submitBtn.innerHTML = originalBtnHtml;
+                }
+            });
+        });
+    }
+
 })();

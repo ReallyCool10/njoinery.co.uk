@@ -1650,6 +1650,68 @@ ul {
     align-self: flex-start;
 }
 
+.submit-button:disabled,
+.submit-button.is-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: btnSpin 0.75s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes btnSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Form Status Alerts */
+.form-status {
+    display: none;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    border: 1px solid transparent;
+}
+
+.form-status.active {
+    display: block;
+    animation: fadeIn 0.3s var(--ease-out);
+}
+
+.form-status.success {
+    background-color: rgba(66, 178, 21, 0.1);
+    border-color: rgba(66, 178, 21, 0.3);
+    color: #27690d;
+}
+
+.form-status.error {
+    background-color: rgba(217, 83, 79, 0.1);
+    border-color: rgba(217, 83, 79, 0.3);
+    color: #a94442;
+}
+
+.form-status.warning {
+    background-color: rgba(200, 165, 90, 0.15);
+    border-color: rgba(200, 165, 90, 0.4);
+    color: #8a6d3b;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* ============================================
    FOOTER
    ============================================ */
