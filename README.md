@@ -91,3 +91,13 @@ Add project images to an `images/` folder and update the portfolio items with re
 ## License
 
 © 2024 N Joinery. All rights reserved.
+
+## Images
+
+- `images/hero/web/` and `images/portfolio/web/` hold the web-optimised WebP files the site uses
+  (several widths each, picked automatically by the browser via `srcset`).
+- `images/og/` holds 1200×630 JPEG share images for social media and Google.
+- Full-size originals live in `DATA/` (including `DATA/site-originals/`). `DATA/` is excluded from the
+  published site by `_config.yml`.
+- Each homepage hero slide sets its focus point with `object-position` in `index.html`; adjust the
+  percentages there if a slide crops badly on a particular screen size.

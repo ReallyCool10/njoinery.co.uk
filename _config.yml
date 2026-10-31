@@ -1,0 +1,6 @@
+# GitHub Pages (Jekyll) build settings.
+# Keep raw photo archives and repo housekeeping files off the public site.
+exclude:
+  - DATA
+  - README.md
+  - "*.ini"

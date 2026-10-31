@@ -85,18 +85,6 @@
         });
     }
 
-    /* ---------- Hero Parallax ---------- */
-    var heroBg = document.querySelector('.hero-bg');
-
-    if (heroBg) {
-        window.addEventListener('scroll', function () {
-            var scrollY = window.scrollY;
-            if (scrollY < window.innerHeight) {
-                heroBg.style.transform = 'translateY(' + (scrollY * 0.35) + 'px) scale(1.05)';
-            }
-        }, { passive: true });
-    }
-
     /* ---------- Animated Counters ---------- */
     var counters = document.querySelectorAll('[data-count]');
 
@@ -141,19 +129,37 @@
 
     /* ---------- Hero Slideshow ---------- */
     var heroSlides = document.querySelectorAll('.hero-slide');
+
+    // Only the first slide loads with the page; the rest are fetched once the
+    // page has finished loading so they don't compete with the first image.
+    function loadDeferredHeroImages() {
+        document.querySelectorAll('.hero-slide img[data-src]').forEach(function (img) {
+            if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            img.removeAttribute('data-srcset');
+        });
+    }
+
     if (heroSlides.length > 1) {
+        if (document.readyState === 'complete') {
+            loadDeferredHeroImages();
+        } else {
+            window.addEventListener('load', loadDeferredHeroImages);
+        }
+
         var currentSlide = 0;
         var slideCount = heroSlides.length;
         var slideInterval = 6000; // 6 seconds per slide
 
         var heroTimer = setInterval(function () {
-            // Remove active from current
+            var next = (currentSlide + 1) % slideCount;
+            var nextImg = heroSlides[next].querySelector('img');
+            // Skip the change if the next image hasn't arrived yet
+            if (nextImg && (!nextImg.getAttribute('src') || !nextImg.complete)) return;
+
             heroSlides[currentSlide].classList.remove('hero-slide--active');
-
-            // Advance to next
-            currentSlide = (currentSlide + 1) % slideCount;
-
-            // Activate next slide
+            currentSlide = next;
             heroSlides[currentSlide].classList.add('hero-slide--active');
         }, slideInterval);
 
@@ -162,6 +168,11 @@
             clearInterval(heroTimer);
         });
     }
+
+    /* ---------- Footer Year ---------- */
+    document.querySelectorAll('.js-year').forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+    });
 
     /* ---------- Lightbox ---------- */
     var lightbox = document.querySelector('.lightbox');
