@@ -1639,6 +1639,10 @@ ul {
     margin-bottom: 1rem;
 }
 
+.contact-details address {
+    font-style: normal;
+}
+
 .contact-details-intro {
     margin-bottom: 1.75rem;
 }
