@@ -427,6 +427,29 @@ ul {
     50% { transform: translateY(4px); }
 }
 
+@media (min-width: 769px) {
+    /* Desktop: nav + image + text bar together fill the whole screen.
+       The image panel grows to take up whatever height is left. */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    .hero-media {
+        flex: 1 1 auto;
+        height: auto;
+        min-height: 300px;
+        /* Widen on big screens so the image stays landscape (about 1.7:1) */
+        width: min(100% - 2 * clamp(1.25rem, 4vw, 3rem), max(var(--container-max) - 6rem, (100svh - 12rem) * 1.7));
+    }
+
+    .hero-bar {
+        flex: 0 0 auto;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-media {
         /* Phones: full width, near-portrait. Height is set directly (not via
