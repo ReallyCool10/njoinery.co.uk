@@ -344,9 +344,24 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Each slide sets its own focus point inline via object-position */
+    /* Images are pre-cropped per folder (desktop 2:1, mobile 4:5), so centre them */
     object-position: center;
     display: block;
+}
+
+.hero-slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Separate slide sets: desktop and mobile each show (and download) their own */
+@media (min-width: 769px) {
+    .hero-slide[data-set="mobile"] { display: none; }
+}
+
+@media (max-width: 768px) {
+    .hero-slide[data-set="desktop"] { display: none; }
 }
 
 .hero-slide--active {
@@ -1919,7 +1934,7 @@ ul {
 }
 
 .footer-sister {
-    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
     color: var(--color-text-secondary);
 }
 

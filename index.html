@@ -135,20 +135,41 @@
     <section class="hero" id="hero">
         <div class="hero-media">
             <div class="hero-slideshow" id="hero-slideshow">
+                <!--
+                    Hero images live in two folders:
+                      images/hero/desktop/slide-N.jpg  (landscape, 2:1, about 2400 x 1200)
+                      images/hero/mobile/slide-N.jpg   (portrait, 4:5, about 1080 x 1350)
+                    To change a slide, replace the file with one of the same name.
+                    Slide 1 uses one slot that shows desktop/slide-1 or mobile/slide-1.
+                -->
                 <div class="hero-slide hero-slide--active">
-                    <img src="images/hero/web/walnut-coffer-960.webp" srcset="images/hero/web/walnut-coffer-640.webp 640w, images/hero/web/walnut-coffer-960.webp 960w, images/hero/web/walnut-coffer-1440.webp 1440w, images/hero/web/walnut-coffer-1920.webp 1920w, images/hero/web/walnut-coffer-2560.webp 2560w" sizes="100vw" fetchpriority="high" width="1440" height="1080" alt="Walnut coffered ceiling with star marquetry and a backlit onyx light" style="object-position: 48% 45%;">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images/hero/mobile/slide-1.jpg">
+                        <img src="images/hero/desktop/slide-1.jpg" fetchpriority="high" width="2400" height="1200" alt="Walnut coffered ceiling with star marquetry and lighting">
+                    </picture>
                 </div>
-                <div class="hero-slide">
-                    <img data-src="images/hero/web/walnut-ceiling-grid-960.webp" data-srcset="images/hero/web/walnut-ceiling-grid-640.webp 640w, images/hero/web/walnut-ceiling-grid-960.webp 960w, images/hero/web/walnut-ceiling-grid-1440.webp 1440w, images/hero/web/walnut-ceiling-grid-1920.webp 1920w" sizes="100vw" decoding="async" width="1440" height="1920" alt="Walnut ceiling coffers, each with a star inlay and a diamond-shaped light" style="object-position: 50% 42%;">
+                <!-- Desktop slides -->
+                <div class="hero-slide" data-set="desktop">
+                    <img data-src="images/hero/desktop/slide-2.jpg" decoding="async" alt="Bespoke oak cabinetry and shelving with an integrated window seat">
                 </div>
-                <div class="hero-slide">
-                    <img data-src="images/hero/web/sauna-benches-960.webp" data-srcset="images/hero/web/sauna-benches-640.webp 640w, images/hero/web/sauna-benches-960.webp 960w, images/hero/web/sauna-benches-1440.webp 1440w, images/hero/web/sauna-benches-1920.webp 1920w" sizes="100vw" decoding="async" width="1440" height="1080" alt="Bespoke sauna with slatted timber benches and concealed LED lighting" style="object-position: 60% 55%;">
+                <div class="hero-slide" data-set="desktop">
+                    <img data-src="images/hero/desktop/slide-3.jpg" decoding="async" alt="Celtic inlay set into a figured hardwood panel">
                 </div>
-                <div class="hero-slide">
-                    <img data-src="images/hero/web/celtic-inlay-960.webp" data-srcset="images/hero/web/celtic-inlay-640.webp 640w, images/hero/web/celtic-inlay-960.webp 960w, images/hero/web/celtic-inlay-1326.webp 1326w" sizes="100vw" decoding="async" width="1326" height="1326" alt="Celtic inlay set into a figured hardwood panel" style="object-position: 50% 50%;">
+                <div class="hero-slide" data-set="desktop">
+                    <img data-src="images/hero/desktop/slide-4.jpg" decoding="async" alt="Compass star inlay in Ipê hardwood">
                 </div>
-                <div class="hero-slide">
-                    <img data-src="images/hero/web/compass-star-960.webp" data-srcset="images/hero/web/compass-star-640.webp 640w, images/hero/web/compass-star-960.webp 960w, images/hero/web/compass-star-1440.webp 1440w, images/hero/web/compass-star-1920.webp 1920w, images/hero/web/compass-star-2560.webp 2560w" sizes="100vw" decoding="async" width="1440" height="907" alt="Compass star inlay in Ipê hardwood" style="object-position: 50% 55%;">
+                <!-- Mobile slides -->
+                <div class="hero-slide" data-set="mobile">
+                    <img data-src="images/hero/mobile/slide-2.jpg" decoding="async" alt="Walnut ceiling coffers, each with a star inlay and a diamond-shaped light">
+                </div>
+                <div class="hero-slide" data-set="mobile">
+                    <img data-src="images/hero/mobile/slide-3.jpg" decoding="async" alt="Bespoke sauna seen through its door, with slatted timber benches and concealed LED lighting">
+                </div>
+                <div class="hero-slide" data-set="mobile">
+                    <img data-src="images/hero/mobile/slide-4.jpg" decoding="async" alt="Celtic inlay set into a figured hardwood panel">
+                </div>
+                <div class="hero-slide" data-set="mobile">
+                    <img data-src="images/hero/mobile/slide-5.jpg" decoding="async" alt="Compass star inlay in Ipê hardwood">
                 </div>
             </div>
         </div>
@@ -237,8 +258,8 @@
                 </ul>
             </div>
             <div class="footer-company">
-                <p class="footer-sister">Sister site: <a href="https://www.agrippaarchitectural.com" target="_blank" rel="noopener">Agrippa Architectural</a></p>
                 <p class="footer-legal">N Joinery is a trading name of Agrippa Architectural Services Ltd. Registered in England and Wales, company number 12514836. Registered office: Old Stock Exchange 3rd Floor, St. Nicholas Street, Bristol, England, BS1 1TG.</p>
+                <p class="footer-sister"><a href="https://www.agrippaarchitectural.com" target="_blank" rel="noopener">agrippaarchitectural.com</a></p>
             </div>
         </div>
     </footer>

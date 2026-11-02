@@ -128,42 +128,70 @@
     }
 
     /* ---------- Hero Slideshow ---------- */
-    var heroSlides = document.querySelectorAll('.hero-slide');
+    // Slides marked data-set="desktop" or data-set="mobile" are hidden by CSS
+    // on the other screen size. Only the visible set rotates, and only its
+    // images are downloaded (after the page has loaded, so they don't compete
+    // with the first slide).
+    var heroSlideshow = document.getElementById('hero-slideshow');
 
-    // Only the first slide loads with the page; the rest are fetched once the
-    // page has finished loading so they don't compete with the first image.
-    function loadDeferredHeroImages() {
-        document.querySelectorAll('.hero-slide img[data-src]').forEach(function (img) {
-            if (img.dataset.srcset) img.srcset = img.dataset.srcset;
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            img.removeAttribute('data-srcset');
-        });
-    }
+    if (heroSlideshow) {
+        var allHeroSlides = Array.prototype.slice.call(heroSlideshow.querySelectorAll('.hero-slide'));
+        var heroSlides = [];
+        var currentSlide = 0;
+        var pageLoaded = document.readyState === 'complete';
 
-    if (heroSlides.length > 1) {
-        if (document.readyState === 'complete') {
-            loadDeferredHeroImages();
-        } else {
-            window.addEventListener('load', loadDeferredHeroImages);
+        function visibleHeroSlides() {
+            return allHeroSlides.filter(function (slide) {
+                return window.getComputedStyle(slide).display !== 'none';
+            });
         }
 
-        var currentSlide = 0;
-        var slideCount = heroSlides.length;
-        var slideInterval = 6000; // 6 seconds per slide
+        function loadSlideImages(slides) {
+            slides.forEach(function (slide) {
+                var img = slide.querySelector('img[data-src]');
+                if (!img) return;
+                if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                img.removeAttribute('data-srcset');
+            });
+        }
+
+        function setupHeroSlides() {
+            heroSlides = visibleHeroSlides();
+            allHeroSlides.forEach(function (slide) { slide.classList.remove('hero-slide--active'); });
+            currentSlide = 0;
+            if (heroSlides[0]) heroSlides[0].classList.add('hero-slide--active');
+            if (pageLoaded) loadSlideImages(heroSlides);
+        }
+
+        setupHeroSlides();
+
+        if (!pageLoaded) {
+            window.addEventListener('load', function () {
+                pageLoaded = true;
+                loadSlideImages(heroSlides);
+            });
+        }
+
+        // Switch sets if the screen crosses the breakpoint (e.g. rotating a tablet)
+        var heroMq = window.matchMedia('(max-width: 768px)');
+        var onHeroMqChange = function () { setupHeroSlides(); };
+        if (heroMq.addEventListener) heroMq.addEventListener('change', onHeroMqChange);
+        else if (heroMq.addListener) heroMq.addListener(onHeroMqChange);
 
         var heroTimer = setInterval(function () {
-            var next = (currentSlide + 1) % slideCount;
+            if (heroSlides.length < 2) return;
+            var next = (currentSlide + 1) % heroSlides.length;
             var nextImg = heroSlides[next].querySelector('img');
-            // Skip the change if the next image hasn't arrived yet
+            // Wait if the next image hasn't arrived yet
             if (nextImg && (!nextImg.getAttribute('src') || !nextImg.complete)) return;
 
             heroSlides[currentSlide].classList.remove('hero-slide--active');
             currentSlide = next;
             heroSlides[currentSlide].classList.add('hero-slide--active');
-        }, slideInterval);
+        }, 6000);
 
-        // Cleanup on page unload
         window.addEventListener('beforeunload', function () {
             clearInterval(heroTimer);
         });

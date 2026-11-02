@@ -71,33 +71,27 @@ Edit these in `css/style.css` to match your brand.
 - Add your contact details in `contact.html`
 
 ### Images
-Add project images to an `images/` folder and update the portfolio items with real image paths.
 
-## Technologies Used
+### Homepage hero (slideshow)
 
-- HTML5
-- CSS3 (with responsive design)
-- Vanilla JavaScript
-- GitHub Pages (hosting)
+The hero uses two separate sets of images, one for desktop and one for phones:
 
-## Browser Support
+| Folder | Shape | Suggested size | Slides |
+|---|---|---|---|
+| `images/hero/desktop/` | landscape, 2:1 | 2400 × 1200 px | `slide-1.jpg` … `slide-4.jpg` |
+| `images/hero/mobile/` | portrait, 4:5 | 1080 × 1350 px | `slide-1.jpg` … `slide-5.jpg` |
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+- **To change a slide:** replace the file with a new one of the same name. Crop it to the shape
+  above first, because the site centres each image and trims anything that doesn't fit.
+- Save as JPG at about 80% quality; aim for under ~300 KB each.
+- Phones only download the mobile set and desktops only the desktop set.
+- **To add or remove a slide:** edit the hero block in `index.html` (a comment there explains it).
+- Raw photos are kept in `DATA/Hero/`, including the newer set in `DATA/Hero/new-photos-2026-10/`.
 
-## License
+### Other images
 
-© 2024 N Joinery. All rights reserved.
-
-## Images
-
-- `images/hero/web/` and `images/portfolio/web/` hold the web-optimised WebP files the site uses
-  (several widths each, picked automatically by the browser via `srcset`).
+- `images/portfolio/web/` holds the web-optimised WebP files used on the portfolio and project pages
+  (800px and 1600px versions, picked automatically by the browser).
 - `images/og/` holds 1200×630 JPEG share images for social media and Google.
 - Full-size originals live in `DATA/` (including `DATA/site-originals/`). `DATA/` is excluded from the
   published site by `_config.yml`.
-- Each homepage hero slide sets its focus point with `object-position` in `index.html`; adjust the
-  percentages there if a slide crops badly on a particular screen size.
